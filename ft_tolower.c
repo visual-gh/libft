@@ -6,11 +6,11 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 19:46:25 by Visual            #+#    #+#             */
-/*   Updated: 2025/09/29 19:46:50 by Visual           ###   ########.fr       */
+/*   Updated: 2025/09/29 19:50:15 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

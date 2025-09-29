@@ -6,11 +6,11 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 19:41:22 by Visual            #+#    #+#             */
-/*   Updated: 2025/09/29 19:41:55 by Visual           ###   ########.fr       */
+/*   Updated: 2025/09/29 19:50:12 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

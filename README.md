@@ -16,7 +16,7 @@ These functions are fundamental re-implementations of their standard C counterpa
 
 ### **Memory & String Manipulation**
 
-* [ ] `ft_strlen`
+* [x] `ft_strlen`
 * [ ] `ft_memset`
 * [ ] `ft_bzero`
 * [ ] `ft_memcpy`
