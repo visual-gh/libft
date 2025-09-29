@@ -17,8 +17,8 @@ These functions are fundamental re-implementations of their standard C counterpa
 ### **Memory & String Manipulation**
 
 * [x] `ft_strlen`
-* [ ] `ft_memset`
-* [ ] `ft_bzero`
+* [x] `ft_memset`
+* [x] `ft_bzero`
 * [ ] `ft_memcpy`
 * [ ] `ft_memmove`
 * [ ] `ft_strlcpy`
@@ -32,9 +32,9 @@ These functions are fundamental re-implementations of their standard C counterpa
 
 ### **Conversions & Allocations**
 
-* [ ] `ft_atoi`
+* [x] `ft_atoi`
 * [ ] `ft_calloc` (Memory allocation)
-* [ ] `ft_strdup` (String allocation and copy)
+* [x] `ft_strdup` (String allocation and copy)
 
 ---
 
