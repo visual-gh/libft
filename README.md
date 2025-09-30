@@ -45,7 +45,7 @@ These functions do not have exact standard C library equivalents and introduce n
 ### **String Utilities**
 
 * [ ] `ft_substr` (Extract a substring)
-* [ ] `ft_strjoin` (Join two strings)
+* [x] `ft_strjoin` (Join two strings)
 * [ ] `ft_strtrim` (Trim whitespace/set from a string)
 * [ ] `ft_split` (Split a string by a delimiter)
 * [ ] `ft_itoa` (Integer to string conversion)
@@ -54,10 +54,10 @@ These functions do not have exact standard C library equivalents and introduce n
 
 * [ ] `ft_strmapi` (Apply function to string characters with index)
 * [ ] `ft_striteri` (Iterate string and apply function to each character)
-* [ ] `ft_putchar_fd` (Output a character to a file descriptor)
-* [ ] `ft_putstr_fd` (Output a string to a file descriptor)
-* [ ] `ft_putendl_fd` (Output a string and a newline to a file descriptor)
-* [ ] `ft_putnbr_fd` (Output a number to a file descriptor)
+* [x] `ft_putchar_fd` (Output a character to a file descriptor)
+* [x] `ft_putstr_fd` (Output a string to a file descriptor)
+* [x] `ft_putendl_fd` (Output a string and a newline to a file descriptor)
+* [x] `ft_putnbr_fd` (Output a number to a file descriptor)
 
 ---
 
