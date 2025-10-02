@@ -18,7 +18,7 @@
 * [ ] **ft_strchr** → locate char in string (first occurrence)
 * [x] **ft_strdup** → duplicate string (malloc)
 * [ ] **ft_strlcat** → concatenate with size limit
-* [ ] **ft_strlcpy** → copy with size limit
+* [x] **ft_strlcpy** → copy with size limit
 * [x] **ft_strlen** → string length
 * [ ] **ft_strncmp** → compare strings (n chars)
 * [ ] **ft_strnstr** → find substring in string (bounded)
