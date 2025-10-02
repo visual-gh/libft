@@ -19,8 +19,8 @@ These functions are fundamental re-implementations of their standard C counterpa
 * [x] `ft_strlen`
 * [x] `ft_memset`
 * [x] `ft_bzero`
-* [ ] `ft_memcpy`
-* [ ] `ft_memmove`
+* [x] `ft_memcpy`
+* [x] `ft_memmove`
 * [ ] `ft_strlcpy`
 * [ ] `ft_strlcat`
 * [ ] `ft_strchr`
