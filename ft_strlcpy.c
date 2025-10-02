@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 19:53:27 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/02 17:15:35 by Visual           ###   ########.fr       */
+/*   Created: 2025/10/02 16:18:52 by Visual            #+#    #+#             */
+/*   Updated: 2025/10/02 18:48:37 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *buf, int c, size_t len)
+size_t	ft_strlcpy(char *dst, char *src, size_t size)
 {
-	unsigned char	*ptr;
+	size_t	len;
 
-	ptr = (unsigned char *)buf;
-	while (len--)
-		*ptr++ = (unsigned char)c;
-	return (buf);
+	len = ft_strlen(src);
+	if (size)
+	{
+		if (len >= size)
+		{
+			ft_memcpy(dst, src, size - 1);
+			dst[size - 1] = '\0';
+		}
+		else
+			ft_memcpy(dst, src, len + 1);
+	}
+	return (len);
 }
