@@ -6,13 +6,13 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 16:18:52 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/02 18:48:37 by Visual           ###   ########.fr       */
+/*   Updated: 2025/10/03 18:02:49 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;
 

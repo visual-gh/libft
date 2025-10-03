@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 18:54:30 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/04 00:38:19 by Visual           ###   ########.fr       */
+/*   Created: 2025/10/03 17:10:50 by Visual            #+#    #+#             */
+/*   Updated: 2025/10/03 17:16:24 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	return (c >= '0' && c <= '9');
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

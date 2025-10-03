@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 18:54:30 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/04 00:38:19 by Visual           ###   ########.fr       */
+/*   Created: 2025/10/03 15:58:04 by Visual            #+#    #+#             */
+/*   Updated: 2025/10/03 16:00:10 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	return (c >= '0' && c <= '9');
+	const char	*last;
+
+	last = NULL;
+	while (*s)
+	{
+		if (*s == (unsigned char)c)
+			last = s;
+		s++;
+	}
+	if (!c)
+		return ((char *)s);
+	return ((char *)last);
 }

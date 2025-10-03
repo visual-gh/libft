@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 18:54:30 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/04 00:38:19 by Visual           ###   ########.fr       */
+/*   Created: 2025/10/03 17:08:21 by Visual            #+#    #+#             */
+/*   Updated: 2025/10/04 01:00:40 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	return (c >= '0' && c <= '9');
+	char	*map;
+	size_t	i;
+
+	if (!s || !f)
+		return (NULL);
+	map = malloc(ft_strlen(s) + 1);
+	if (!map)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		map[i] = f(i, s[i]);
+		i++;
+	}
+	map[i] = '\0';
+	return (map);
 }
