@@ -6,18 +6,18 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 19:53:27 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/02 17:15:35 by Visual           ###   ########.fr       */
+/*   Updated: 2025/10/03 03:29:45 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *buf, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
+	unsigned char	*p;
 
-	ptr = (unsigned char *)buf;
-	while (len--)
-		*ptr++ = (unsigned char)c;
-	return (buf);
+	p = (unsigned char *)s;
+	while (n--)
+		*p++ = (unsigned char)c;
+	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 23:46:23 by Visual            #+#    #+#             */
-/*   Updated: 2025/09/29 23:58:41 by Visual           ###   ########.fr       */
+/*   Updated: 2025/10/03 04:08:54 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*join;
-	char	*ptr;
+	char	*res;
+	char	*p;
 
 	if (!s1 || !s2)
 		return (NULL);
-	join = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!join)
+	res = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!res)
 		return (NULL);
-	ptr = join;
+	p = res;
 	while (*s1)
-		*ptr++ = *s1++;
+		*p++ = *s1++;
 	while (*s2)
-		*ptr++ = *s2++;
-	*ptr = '\0';
-	return (join);
+		*p++ = *s2++;
+	*p = '\0';
+	return (res);
 }

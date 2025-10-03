@@ -4,13 +4,13 @@
 
 * [x] **ft_atoi** → convert string to int
 * [x] **ft_bzero** → zero out memory
-* [ ] **ft_calloc** → allocate & zero memory
+* [x] **ft_calloc** → allocate & zero memory
 * [x] **ft_isalnum** → check alphanumeric
 * [x] **ft_isalpha** → check alphabetic
 * [x] **ft_isascii** → check ASCII range
 * [x] **ft_isdigit** → check digit
 * [x] **ft_isprint** → check printable
-* [ ] **ft_memchr** → find byte in memory
+* [x] **ft_memchr** → find byte in memory
 * [ ] **ft_memcmp** → compare memory areas
 * [x] **ft_memcpy** → copy memory (non-overlapping)
 * [x] **ft_memmove** → copy memory (handles overlap)

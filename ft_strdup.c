@@ -6,22 +6,22 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 22:38:06 by Visual            #+#    #+#             */
-/*   Updated: 2025/09/29 23:35:12 by Visual           ###   ########.fr       */
+/*   Updated: 2025/10/03 04:15:12 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(const char *src)
 {
-	char	*dup;
+	char	*dst;
 	size_t	len;
 
-	len = ft_strlen(s1);
-	dup = malloc(sizeof(char) * (len + 1));
-	if (!dup)
+	len = ft_strlen(src);
+	dst = malloc(sizeof(char) * (len + 1));
+	if (!dst)
 		return (NULL);
-	ft_memcpy(dup, s1, len);
-	dup[len] = '\0';
-	return (dup);
+	ft_memcpy(dst, src, len);
+	dst[len] = '\0';
+	return (dst);
 }

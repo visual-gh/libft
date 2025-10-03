@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 20:06:46 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/03 01:30:48 by Visual           ###   ########.fr       */
+/*   Created: 2025/10/03 04:20:45 by Visual            #+#    #+#             */
+/*   Updated: 2025/10/03 04:34:11 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	n;
-	int	sign;
+	const unsigned char	*p;
 
-	n = 0;
-	sign = 1;
-	while (*s == ' ' || (*s >= 9 && *s <= 13))
-		s++;
-	if (*s == '-' || *s == '+')
-		sign = 1 - (2 * (*s++ == '-'));
-	while (*s >= '0' && *s <= '9')
-		n = (n * 10) + (*s++ - '0');
-	return (n * sign);
+	p = (const unsigned char *)s;
+	while (n--)
+	{
+		if (*p == (unsigned char)c)
+			return ((void *)p);
+		p++;
+	}
+	return (NULL);
 }

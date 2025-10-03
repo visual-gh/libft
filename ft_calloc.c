@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 20:06:46 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/03 01:30:48 by Visual           ###   ########.fr       */
+/*   Created: 2025/10/03 01:07:31 by Visual            #+#    #+#             */
+/*   Updated: 2025/10/03 03:29:29 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int	n;
-	int	sign;
+	void	*p;
+	size_t	total;
 
-	n = 0;
-	sign = 1;
-	while (*s == ' ' || (*s >= 9 && *s <= 13))
-		s++;
-	if (*s == '-' || *s == '+')
-		sign = 1 - (2 * (*s++ == '-'));
-	while (*s >= '0' && *s <= '9')
-		n = (n * 10) + (*s++ - '0');
-	return (n * sign);
+	total = count * size;
+	p = malloc(total);
+	if (!p)
+		return (NULL);
+	ft_bzero(p, total);
+	return (p);
 }
