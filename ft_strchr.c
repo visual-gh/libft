@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 15:53:22 by Visual            #+#    #+#             */
-/*   Updated: 2025/11/10 04:09:11 by Visual           ###   ########.fr       */
+/*   Updated: 2025/11/10 18:09:21 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	while (1)
 	{
 		if (*s == (unsigned char)c)
 			return ((char *)s);
+		if (*s == '\0')
+			return (NULL);
 		s++;
 	}
-	if (*s == (unsigned char)c)
-		return ((char *)s);
-	return (0);
 }
