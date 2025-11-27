@@ -1,79 +1,135 @@
-# LIBFT - Your very first own library
+# Libft
 
-**Summary:** This document serves as the subject for the libft project at 42.
-**Version:** Your very first own library
+**Your very first own library**
 
-<br>
+## Summary
 
-## Table of Contents
+This project involves coding a C library that will include numerous general purpose functions for your programs.
 
-1. [Introduction](#introduction)
-2. [Common Instructions](#common-instructions)
-3. [Mandatory Part](#mandatory-part)
-   - [Technical Considerations](#technical-considerations)
-   - [Part 1 - Libc Functions](#part-1---libc-functions)
-   - [Part 2 - Additional Functions](#part-2---additional-functions)
-4. [Bonus Part](#bonus-part)
-5. [Submission and Peer-evaluation](#submission-and-peer-evaluation)
+**Version:** 18
 
-<br>
+---
 
-## Introduction
+## Contents
 
-Programming can be very tedious when one doesn't have access to the highly useful standard functions. This project is about understanding the way these functions work: implementing and learning to use them. You will create your own library. It will be helpful since you will use it in your next C school assignments.
+- [I. Introduction](#i-introduction)
+- [II. Common Instructions](#ii-common-instructions)
+- [III. AI Instructions](#iii-ai-instructions)
+- [IV. Mandatory part](#iv-mandatory-part)
+  - [IV.1 Technical considerations](#iv1-technical-considerations)
+  - [IV.2 Part 1 - Libc functions](#iv2-part-1---libc-functions)
+  - [IV.3 Part 2 - Additional functions](#iv3-part-2---additional-functions)
+- [V. Bonus part](#v-bonus-part)
+- [VI. Submission and peer-evaluation](#vi-submission-and-peer-evaluation)
 
-Take the time to expand your libft throughout the year. However, when working on a new project, don't forget to ensure the functions used in your library are allowed in the project guidelines.
+---
 
-<br>
+## I. Introduction
 
-## Common Instructions
+C programming can be quite tedious without access to the highly useful standard functions. This project aims to help you understand how these functions work by implementing them yourself and learning to use them effectively. You will create your own library, which will be valuable for your future C school assignments.
+
+Take the time to expand your libft throughout the year. However, when working on a new project, always check that the functions used in your library comply with the project guidelines.
+
+---
+
+## II. Common Instructions
 
 - Your project must be written in C.
-- Your project must be written in accordance with the Norm. If you have bonus files/functions, they are included in the norm check and you will receive a 0 if there is a norm error inside.
-- Your functions should not quit unexpectedly (segmentation fault, bus error, double free, etc) apart from undefined behaviors. If this happens, your project will be considered non functional and will receive a 0 during the evaluation.
-- All heap allocated memory space must be properly freed when necessary. No leaks will be tolerated.
-- If the subject requires it, you must submit a Makefile which will compile your source files to the required output with the flags -Wall, -Wextra and -Werror, use cc, and your Makefile must not relink.
-- Your Makefile must at least contain the rules $(NAME), all, clean, fclean and re.
-- To turn in bonuses to your project, you must include a rule bonus to your Makefile, which will add all the various headers, libraries or functions that are forbidden on the main part of the project. Bonuses must be in a different file _bonus.{c/h} if the subject does not specify anything else. Mandatory and bonus part evaluation is done separately.
-- If your project allows you to use your libft, you must copy its sources and its associated Makefile in a libft folder with its associated Makefile. Your project's Makefile must compile the library by using its Makefile, then compile the project.
-- We encourage you to create test programs for your project even though this work won't have to be submitted and won't be graded. It will give you a chance to easily test your work and your peers' work. You will find those tests especially useful during your defence. Indeed, during defence, you are free to use your tests and/or the tests of the peer you are evaluating.
-- Submit your work to your assigned git repository. Only the work in the git repository will be graded. If Deepthought is assigned to grade your work, it will be done after your peer-evaluations. If an error happens in any section of your work during Deepthought's grading, the evaluation will stop.
+- Your project must be written in accordance with the Norm. If you have bonus files/functions, they are included in the norm check, and you will receive a 0 if there is a norm error.
+- Your functions should not quit unexpectedly (segmentation fault, bus error, double free, etc.) except for undefined behavior. If this occurs, your project will be considered non-functional and will receive a 0 during the evaluation.
+- All heap-allocated memory must be properly freed when necessary. Memory leaks will not be tolerated.
+- If the subject requires it, you must submit a Makefile that compiles your source files to the required output with the flags `-Wall`, `-Wextra`, and `-Werror`, using `cc`. Additionally, your Makefile must not perform unnecessary relinking.
+- Your Makefile must contain at least the rules `$(NAME)`, `all`, `clean`, `fclean` and `re`.
+- To submit bonuses for your project, you must include a `bonus` rule in your Makefile, which will add all the various headers, libraries, or functions that are not allowed in the main part of the project. Bonuses must be placed in `_bonus.{c/h}` files, unless the subject specifies otherwise. The evaluation of mandatory and bonus parts is conducted separately.
+- If your project allows you to use your libft, you must copy its sources and its associated Makefile into a `libft` folder. Your project's Makefile must compile the library by using its Makefile, then compile the project.
+- We encourage you to create test programs for your project, even though this work does not need to be submitted and will not be graded. It will give you an opportunity to easily test your work and your peers' work. You will find these tests especially useful during your defence. Indeed, during defence, you are free to use your tests and/or the tests of the peer you are evaluating.
+- Submit your work to the assigned Git repository. Only the work in the Git repository will be graded. If Deepthought is assigned to grade your work, it will occur after your peer-evaluations. If an error happens in any section of your work during Deepthought's grading, the evaluation will stop.
 
-<br>
+---
 
-## Mandatory Part
+## III. AI Instructions
+
+### Context
+
+This project is designed to help you discover the fundamental building blocks of your 42 training.
+
+To properly anchor key knowledge and skills, it's essential to adopt a thoughtful approach to using AI tools and support.
+
+True foundational learning requires genuine intellectual effort — through challenge, repetition, and peer-learning exchanges.
+
+For a more complete overview of our stance on AI — as a learning tool, as part of the 42 training, and as an expectation in the job market — please refer to the dedicated FAQ on the intranet.
+
+### Main message
+
+☛ Build strong foundations without shortcuts.
+
+☛ Really develop tech & power skills.
+
+☛ Experience real peer-learning, start learning how to learn and solve new problems.
+
+☛ The learning journey is more important than the result.
+
+☛ Learn about the risks associated with AI, and develop effective control practices and countermeasures to avoid common pitfalls.
+
+### Learner rules
+
+- You should apply reasoning to your assigned tasks, especially before turning to AI.
+- You should not ask for direct answers to the AI.
+- You should learn about 42 global approach on AI.
+
+### Phase outcomes
+
+Within this foundational phase, you will get the following outcomes:
+
+- Get proper tech and coding foundations.
+- Know why and how AI can be dangerous during this phase.
+
+### Comments and example
+
+- Yes, we know AI exists — and yes, it can solve your projects. But you're here to learn, not to prove that AI has learned. Don't waste your time (or ours) just to demonstrate that AI can solve the given problem.
+- Learning at 42 isn't about knowing the answer — it's about developing the ability to find one. AI gives you the answer directly, but that prevents you from building your own reasoning. And reasoning takes time, effort, and involves failure. The path to success is not supposed to be easy.
+- Keep in mind that during exams, AI is not available — no internet, no smartphones, etc. You'll quickly realise if you've relied too heavily on AI in your learning process.
+- Peer learning exposes you to different ideas and approaches, improving your interpersonal skills and your ability to think divergently. That's far more valuable than just chatting with a bot. So don't be shy — talk, ask questions, and learn together!
+- Yes, AI will be part of the curriculum — both as a learning tool and as a topic in itself. You'll even have the chance to build your own AI software. In order to learn more about our crescendo approach you'll go through in the documentation available on the intranet.
+
+#### ✓ Good practice
+
+I'm stuck on a new concept. I ask someone nearby how they approached it. We talk for 10 minutes — and suddenly it clicks. I get it.
+
+#### ✗ Bad practice
+
+I secretly use AI, copy some code that looks right. During peer evaluation, I can't explain anything. I fail. During the exam — no AI — I'm stuck again. I fail.
+
+---
+
+## IV. Mandatory part
 
 | | |
 |---|---|
-| **Program name:** | `libft.a` |
-| **Turn in files:** | `Makefile`, `libft.h`, `ft_*.c` |
-| **Makefile:** | `NAME`, `all`, `clean`, `fclean`, `re` |
-| **External functs:** | Detailed below |
-| **Libft authorized:** | N/A |
+| **Program Name** | `libft.a` |
+| **Files to Submit** | Makefile, libft.h, ft_*.c |
+| **Makefile** | NAME, all, clean, fclean, re |
+| **External Function** | Detailed below |
+| **Libft authorized** | n/a |
+| **Description** | Create your own library: a collection of functions that will serve as a useful tool throughout your cursus. |
 
-**Description:** Write your own library: a collection of functions that will be a useful tool for your cursus.
+### IV.1 Technical considerations
 
-<br>
+- Declaring global variables is strictly forbidden.
+- If you need helper functions to break down a more complex function, define them as static functions to restrict their scope to the appropriate file.
+- All files must be placed at the root of your repository.
+- Submitting unused files is not allowed.
+- Every `.c` file must compile with the following flags: `-Wall -Wextra -Werror`.
+- You must use the `ar` command to create your library. The use of `libtool` is strictly forbidden.
+- Your `libft.a` must be created at the root of your repository.
 
-### Technical Considerations
+### IV.2 Part 1 - Libc functions
 
-- Declaring global variables is forbidden.
-- If you need helper functions to split a more complex function, define them as static functions. This way, their scope will be limited to the appropriate file.
-- Place all your files at the root of your repository.
-- Turning in unused files is forbidden.
-- Every .c files must compile with the flags -Wall -Wextra -Werror.
-- You must use the command AR to create your library. Using the libtool command is forbidden.
-- Your libft.a has to be created at the root of your repository.
+To begin, you must reimplement a set of functions from the libc. Your version will have the same prototypes and behaviors as the originals, adhering strictly to their definitions in the man page. The only difference will be their names, as they must start with the `ft_` prefix. For example, `strlen` becomes `ft_strlen`.
 
-<br>
+> ⚠️ **Some of the function prototypes you need to reimplement use the 'restrict' qualifier. This keyword is part of the C99 standard. Therefore, it is forbidden to include it in your own prototypes or to compile your code with the -std=c99 flag.**
 
-### Part 1 - Libc Functions
-
-To begin, you must redo a set of functions from the libc. Your functions will have the same prototypes and implement the same behaviors as the originals. They must comply with the way they are defined in their man. The only difference will be their names. They will begin with the "ft_" prefix. For instance, strlen becomes ft_strlen.
-
-> ⚠️ **Some of the functions' prototypes you have to redo use the "restrict" qualifier. This keyword is part of the C99 standard. It is therefore forbidden to include it in your own prototypes and to compile your code with the -std=c99 flag.**
-
-You must write your own function implementing the following original ones. They do not require any external functions:
+The following functions must be rewritten without relying on external functions:
 
 - `isalpha`
 - `isdigit`
@@ -97,192 +153,186 @@ You must write your own function implementing the following original ones. They 
 - `strnstr`
 - `atoi`
 
-In order to implement the two following functions, you will use malloc():
+To implement the two following functions, you will use `malloc()`:
+
 - `calloc`
 - `strdup`
 
-<br>
+> ⚠️ **Depending on your current operating system, the 'calloc' function's behavior may differ from its man page description. Follow this rule instead: If nmemb or size is 0, then calloc() returns a unique pointer value that can be successfully passed to free().**
 
-### Part 2 - Additional Functions
+> 💡 **Some functions that you must reimplement, such as strlcpy, strlcat, and bzero, are not included by default in the GNU C Library (glibc). To test them against the system standard, you may need to include `<bsd/string.h>` and compile with the `-lbsd` flag.**
+>
+> **This behaviour is specific to glibc systems. If you are curious, take the opportunity to explore the differences between glibc and BSD libc.**
 
-In this second part, you must develop a set of functions that are either not in the libc, or that are part of it but in a different form.
+### IV.3 Part 2 - Additional functions
 
-> 💡 **Some of the following functions can be useful for writing the functions of Part 1.**
+In this second part, you must develop a set of functions that are either not included in the libc, or exist in a different form.
 
-<br>
+> 💡 **Some of the functions from Part 1 may be useful for implementing the functions below.**
+
+---
 
 #### ft_substr
 
 | | |
 |---|---|
-| **Function name:** | `ft_substr` |
-| **Prototype:** | `char *ft_substr(char const *s, unsigned int start, size_t len);` |
-| **Turn in files:** | - |
-| **Parameters:** | `s`: The string from which to create the substring.<br>`start`: The start index of the substring in the string 's'.<br>`len`: The maximum length of the substring. |
-| **Return value:** | The substring. NULL if the allocation fails. |
-| **External functs:** | `malloc` |
+| **Function Name** | `ft_substr` |
+| **Prototype** | `char *ft_substr(char const *s, unsigned int start, size_t len);` |
+| **Files to Submit** | - |
+| **Parameters** | `s`: The original string from which to create the substring.<br>`start`: The starting index of the substring within 's'.<br>`len`: The maximum length of the substring. |
+| **Return Value** | The substring.<br>NULL if the allocation fails. |
+| **External Function** | `malloc` |
+| **Description** | Allocates memory (using malloc(3)) and returns a substring from the string 's'. The substring starts at index 'start' and has a maximum length of 'len'. |
 
-**Description:** Allocates (with malloc(3)) and returns a substring from the string 's'. The substring begins at index 'start' and is of maximum size 'len'.
-
-<br>
+---
 
 #### ft_strjoin
 
 | | |
 |---|---|
-| **Function name:** | `ft_strjoin` |
-| **Prototype:** | `char *ft_strjoin(char const *s1, char const *s2);` |
-| **Turn in files:** | - |
-| **Parameters:** | `s1`: The prefix string.<br>`s2`: The suffix string. |
-| **Return value:** | The new string. NULL if the allocation fails. |
-| **External functs:** | `malloc` |
+| **Function Name** | `ft_strjoin` |
+| **Prototype** | `char *ft_strjoin(char const *s1, char const *s2);` |
+| **Files to Submit** | - |
+| **Parameters** | `s1`: The prefix string.<br>`s2`: The suffix string. |
+| **Return Value** | The new string.<br>NULL if the allocation fails. |
+| **External Function** | `malloc` |
+| **Description** | Allocates memory (using malloc(3)) and returns a new string, which is the result of concatenating 's1' and 's2'. |
 
-**Description:** Allocates (with malloc(3)) and returns a new string, which is the result of the concatenation of 's1' and 's2'.
-
-<br>
+---
 
 #### ft_strtrim
 
 | | |
 |---|---|
-| **Function name:** | `ft_strtrim` |
-| **Prototype:** | `char *ft_strtrim(char const *s1, char const *set);` |
-| **Turn in files:** | - |
-| **Parameters:** | `s1`: The string to be trimmed.<br>`set`: The reference set of characters to trim. |
-| **Return value:** | The trimmed string. NULL if the allocation fails. |
-| **External functs:** | `malloc` |
+| **Function Name** | `ft_strtrim` |
+| **Prototype** | `char *ft_strtrim(char const *s1, char const *set);` |
+| **Files to Submit** | - |
+| **Parameters** | `s1`: The string to be trimmed.<br>`set`: The string containing the set of characters to be removed. |
+| **Return Value** | The trimmed string.<br>NULL if the allocation fails. |
+| **External Function** | `malloc` |
+| **Description** | Allocates memory (using malloc(3)) and returns a copy of 's1' with characters from 'set' removed from the beginning and the end. |
 
-**Description:** Allocates (with malloc(3)) and returns a copy of 's1' with the characters specified in 'set' removed from the beginning and the end of the string.
-
-<br>
+---
 
 #### ft_split
 
 | | |
 |---|---|
-| **Function name:** | `ft_split` |
-| **Prototype:** | `char **ft_split(char const *s, char c);` |
-| **Turn in files:** | - |
-| **Parameters:** | `s`: The string to be split.<br>`c`: The delimiter character. |
-| **Return value:** | The array of new strings resulting from the split. NULL if the allocation fails. |
-| **External functs:** | `malloc`, `free` |
+| **Function Name** | `ft_split` |
+| **Prototype** | `char **ft_split(char const *s, char c);` |
+| **Files to Submit** | - |
+| **Parameters** | `s`: The string to be split.<br>`c`: The delimiter character. |
+| **Return Value** | The array of new strings resulting from the split.<br>NULL if the allocation fails. |
+| **External Function** | `malloc`, `free` |
+| **Description** | Allocates memory (using malloc(3)) and returns an array of strings obtained by splitting 's' using the character 'c' as a delimiter. The array must end with a NULL pointer. |
 
-**Description:** Allocates (with malloc(3)) and returns an array of strings obtained by splitting 's' using the character 'c' as a delimiter. The array must end with a NULL pointer.
-
-<br>
+---
 
 #### ft_itoa
 
 | | |
 |---|---|
-| **Function name:** | `ft_itoa` |
-| **Prototype:** | `char *ft_itoa(int n);` |
-| **Turn in files:** | - |
-| **Parameters:** | `n`: The integer to convert. |
-| **Return value:** | The string representing the integer. NULL if the allocation fails. |
-| **External functs:** | `malloc` |
+| **Function Name** | `ft_itoa` |
+| **Prototype** | `char *ft_itoa(int n);` |
+| **Files to Submit** | - |
+| **Parameters** | `n`: The integer to convert. |
+| **Return Value** | The string representing the integer.<br>NULL if the allocation fails. |
+| **External Function** | `malloc` |
+| **Description** | Allocates memory (using malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled. |
 
-**Description:** Allocates (with malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled.
-
-<br>
+---
 
 #### ft_strmapi
 
 | | |
 |---|---|
-| **Function name:** | `ft_strmapi` |
-| **Prototype:** | `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));` |
-| **Turn in files:** | - |
-| **Parameters:** | `s`: The string on which to iterate.<br>`f`: The function to apply to each character. |
-| **Return value:** | The string created from the successive applications of 'f'. Returns NULL if the allocation fails. |
-| **External functs:** | `malloc` |
+| **Function Name** | `ft_strmapi` |
+| **Prototype** | `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));` |
+| **Files to Submit** | - |
+| **Parameters** | `s`: The string to iterate over.<br>`f`: The function to apply to each character. |
+| **Return Value** | The string created from the successive applications of 'f'.<br>Returns NULL if the allocation fails. |
+| **External Function** | `malloc` |
+| **Description** | Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second. A new string is created (using malloc(3)) to store the results from the successive applications of f. |
 
-**Description:** Applies the function 'f' to each character of the string 's', and passing its index as first argument to create a new string (with malloc(3)) resulting from successive applications of 'f'.
-
-<br>
+---
 
 #### ft_striteri
 
 | | |
 |---|---|
-| **Function name:** | `ft_striteri` |
-| **Prototype:** | `void ft_striteri(char *s, void (*f)(unsigned int, char*));` |
-| **Turn in files:** | - |
-| **Parameters:** | `s`: The string on which to iterate.<br>`f`: The function to apply to each character. |
-| **Return value:** | None |
-| **External functs:** | None |
+| **Function Name** | `ft_striteri` |
+| **Prototype** | `void ft_striteri(char *s, void (*f)(unsigned int, char*));` |
+| **Files to Submit** | - |
+| **Parameters** | `s`: The string to iterate over.<br>`f`: The function to apply to each character. |
+| **Return Value** | None |
+| **External Function** | None |
+| **Description** | Applies the function 'f' to each character of the string passed as argument, passing its index as the first argument. Each character is passed by address to 'f' so it can be modified if necessary. |
 
-**Description:** Applies the function 'f' on each character of the string passed as argument, passing its index as first argument. Each character is passed by address to 'f' to be modified if necessary.
-
-<br>
+---
 
 #### ft_putchar_fd
 
 | | |
 |---|---|
-| **Function name:** | `ft_putchar_fd` |
-| **Prototype:** | `void ft_putchar_fd(char c, int fd);` |
-| **Turn in files:** | - |
-| **Parameters:** | `c`: The character to output.<br>`fd`: The file descriptor on which to write. |
-| **Return value:** | None |
-| **External functs:** | `write` |
+| **Function Name** | `ft_putchar_fd` |
+| **Prototype** | `void ft_putchar_fd(char c, int fd);` |
+| **Files to Submit** | - |
+| **Parameters** | `c`: The character to output.<br>`fd`: The file descriptor on which to write. |
+| **Return Value** | None |
+| **External Function** | `write` |
+| **Description** | Outputs the character 'c' to the specified file descriptor. |
 
-**Description:** Outputs the character 'c' to the given file descriptor.
-
-<br>
+---
 
 #### ft_putstr_fd
 
 | | |
 |---|---|
-| **Function name:** | `ft_putstr_fd` |
-| **Prototype:** | `void ft_putstr_fd(char *s, int fd);` |
-| **Turn in files:** | - |
-| **Parameters:** | `s`: The string to output.<br>`fd`: The file descriptor on which to write. |
-| **Return value:** | None |
-| **External functs:** | `write` |
+| **Function Name** | `ft_putstr_fd` |
+| **Prototype** | `void ft_putstr_fd(char *s, int fd);` |
+| **Files to Submit** | - |
+| **Parameters** | `s`: The string to output.<br>`fd`: The file descriptor on which to write. |
+| **Return Value** | None |
+| **External Function** | `write` |
+| **Description** | Outputs the string 's' to the specified file descriptor. |
 
-**Description:** Outputs the string 's' to the given file descriptor.
-
-<br>
+---
 
 #### ft_putendl_fd
 
 | | |
 |---|---|
-| **Function name:** | `ft_putendl_fd` |
-| **Prototype:** | `void ft_putendl_fd(char *s, int fd);` |
-| **Turn in files:** | - |
-| **Parameters:** | `s`: The string to output.<br>`fd`: The file descriptor on which to write. |
-| **Return value:** | None |
-| **External functs:** | `write` |
+| **Function Name** | `ft_putendl_fd` |
+| **Prototype** | `void ft_putendl_fd(char *s, int fd);` |
+| **Files to Submit** | - |
+| **Parameters** | `s`: The string to output.<br>`fd`: The file descriptor on which to write. |
+| **Return Value** | None |
+| **External Function** | `write` |
+| **Description** | Outputs the string 's' to the specified file descriptor followed by a newline. |
 
-**Description:** Outputs the string 's' to the given file descriptor followed by a newline.
-
-<br>
+---
 
 #### ft_putnbr_fd
 
 | | |
 |---|---|
-| **Function name:** | `ft_putnbr_fd` |
-| **Prototype:** | `void ft_putnbr_fd(int n, int fd);` |
-| **Turn in files:** | - |
-| **Parameters:** | `n`: The integer to output.<br>`fd`: The file descriptor on which to write. |
-| **Return value:** | None |
-| **External functs:** | `write` |
+| **Function Name** | `ft_putnbr_fd` |
+| **Prototype** | `void ft_putnbr_fd(int n, int fd);` |
+| **Files to Submit** | - |
+| **Parameters** | `n`: The integer to output.<br>`fd`: The file descriptor on which to write. |
+| **Return Value** | None |
+| **External Function** | `write` |
+| **Description** | Outputs the integer 'n' to the specified file descriptor. |
 
-**Description:** Outputs the integer 'n' to the given file descriptor.
+---
 
-<br>
+## V. Bonus part
 
-## Bonus Part
+Once you have completed the mandatory part, consider taking on this extra challenge. Successfully completing this section will earn you bonus points.
 
-If you completed the mandatory part, do not hesitate to go further by doing this extra one. It will bring bonus points if passed successfully.
+Memory and string manipulation functions are useful. But you will soon discover that manipulating lists is even more useful.
 
-Functions to manipulate memory and strings is very useful. But you will soon discover that manipulating lists is even more useful.
-
-You have to use the following structure to represent a node of your list. Add its declaration to your libft.h file:
+You have to use the following structure to represent a node of your list. Add its declaration to your `libft.h` file:
 
 ```c
 typedef struct s_list
@@ -292,161 +342,163 @@ typedef struct s_list
 } t_list;
 ```
 
-The members of the t_list struct are:
-- **content:** The data contained in the node. void * allows to store any kind of data.
-- **next:** The address of the next node, or NULL if the next node is the last one.
+The members of the `t_list` struct are:
 
-In your Makefile, add a make bonus rule to add the bonus functions to your libft.a.
+- **content**: The data contained in the node. Using `void *` allows you to store any type of data.
+- **next**: The address of the next node, or NULL if the current node is the last one.
 
-> ⚠️ **The bonus part will only be assessed if the mandatory part is PERFECT. Perfect means the mandatory part has been integrally done and works without malfunctioning. If you have not passed ALL the mandatory requirements, your bonus part will not be evaluated at all.**
+In your Makefile, add a `make bonus` rule to add the bonus functions in your `libft.a`.
 
-<br>
+> ⚠️ **The bonus part will only be evaluated if the mandatory part is perfect. "Perfect" means the mandatory functions are implemented correctly and work without issues. If you fail to meet ALL the mandatory requirements, the bonus part will not be considered at all.**
 
 Implement the following functions in order to easily use your lists.
 
-<br>
+---
 
 #### ft_lstnew
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstnew` |
-| **Prototype:** | `t_list *ft_lstnew(void *content);` |
-| **Turn in files:** | - |
-| **Parameters:** | `content`: The content to create the node with. |
-| **Return value:** | The new node |
-| **External functs:** | `malloc` |
+| **Function Name** | `ft_lstnew` |
+| **Prototype** | `t_list *ft_lstnew(void *content);` |
+| **Files to Submit** | - |
+| **Parameters** | `content`: The content to store in the new node. |
+| **Return Value** | A pointer to the new node |
+| **External Function** | `malloc` |
+| **Description** | Allocates memory (using malloc(3)) and returns a new node. The 'content' member variable is initialized with the given parameter 'content'. The variable 'next' is initialized to NULL. |
 
-**Description:** Allocates (with malloc(3)) and returns a new node. The member variable 'content' is initialized with the value of the parameter 'content'. The variable 'next' is initialized to NULL.
-
-<br>
+---
 
 #### ft_lstadd_front
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstadd_front` |
-| **Prototype:** | `void ft_lstadd_front(t_list **lst, t_list *new);` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The address of a pointer to the first link of a list.<br>`new`: The address of a pointer to the node to be added to the list. |
-| **Return value:** | None |
-| **External functs:** | None |
+| **Function Name** | `ft_lstadd_front` |
+| **Prototype** | `void ft_lstadd_front(t_list **lst, t_list *new);` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The address of a pointer to the first node of a list.<br>`new`: The address of a pointer to the node to be added. |
+| **Return Value** | None |
+| **External Function** | None |
+| **Description** | Adds the node 'new' at the beginning of the list. |
 
-**Description:** Adds the node 'new' at the beginning of the list.
-
-<br>
+---
 
 #### ft_lstsize
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstsize` |
-| **Prototype:** | `int ft_lstsize(t_list *lst);` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The beginning of the list. |
-| **Return value:** | The length of the list |
-| **External functs:** | None |
+| **Function Name** | `ft_lstsize` |
+| **Prototype** | `int ft_lstsize(t_list *lst);` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The beginning of the list. |
+| **Return Value** | The length of the list |
+| **External Function** | None |
+| **Description** | Counts the number of nodes in the list. |
 
-**Description:** Counts the number of nodes in a list.
-
-<br>
+---
 
 #### ft_lstlast
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstlast` |
-| **Prototype:** | `t_list *ft_lstlast(t_list *lst);` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The beginning of the list. |
-| **Return value:** | Last node of the list |
-| **External functs:** | None |
+| **Function Name** | `ft_lstlast` |
+| **Prototype** | `t_list *ft_lstlast(t_list *lst);` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The beginning of the list. |
+| **Return Value** | Last node of the list |
+| **External Function** | None |
+| **Description** | Returns the last node of the list. |
 
-**Description:** Returns the last node of the list.
-
-<br>
+---
 
 #### ft_lstadd_back
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstadd_back` |
-| **Prototype:** | `void ft_lstadd_back(t_list **lst, t_list *new);` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The address of a pointer to the first link of a list.<br>`new`: The address of a pointer to the node to be added to the list. |
-| **Return value:** | None |
-| **External functs:** | None |
+| **Function Name** | `ft_lstadd_back` |
+| **Prototype** | `void ft_lstadd_back(t_list **lst, t_list *new);` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The address of a pointer to the first node of a list.<br>`new`: The address of a pointer to the node to be added. |
+| **Return Value** | None |
+| **External Function** | None |
+| **Description** | Adds the node 'new' at the end of the list. |
 
-**Description:** Adds the node 'new' at the end of the list.
-
-<br>
+---
 
 #### ft_lstdelone
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstdelone` |
-| **Prototype:** | `void ft_lstdelone(t_list *lst, void (*del)(void *));` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The node to free.<br>`del`: The address of the function used to delete the content. |
-| **Return value:** | None |
-| **External functs:** | `free` |
+| **Function Name** | `ft_lstdelone` |
+| **Prototype** | `void ft_lstdelone(t_list *lst, void (*del)(void *));` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The node to free.<br>`del`: The address of the function used to delete the content. |
+| **Return Value** | None |
+| **External Function** | `free` |
+| **Description** | Takes a node as parameter and frees its content using the function 'del'. Free the node itself but does NOT free the next node. |
 
-**Description:** Takes as a parameter a node and frees the memory of the node's content using the function 'del' given as a parameter and free the node. The memory of 'next' must not be freed.
-
-<br>
+---
 
 #### ft_lstclear
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstclear` |
-| **Prototype:** | `void ft_lstclear(t_list **lst, void (*del)(void *));` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The address of a pointer to a node.<br>`del`: The address of the function used to delete the content of the node. |
-| **Return value:** | None |
-| **External functs:** | `free` |
+| **Function Name** | `ft_lstclear` |
+| **Prototype** | `void ft_lstclear(t_list **lst, void (*del)(void *));` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The address of a pointer to a node.<br>`del`: The address of the function used to delete the content of the node. |
+| **Return Value** | None |
+| **External Function** | `free` |
+| **Description** | Deletes and frees the given node and all its successors, using the function 'del' and free(3). Finally, set the pointer to the list to NULL. |
 
-**Description:** Deletes and frees the given node and every successor of that node, using the function 'del' and free(3). Finally, the pointer to the list must be set to NULL.
-
-<br>
+---
 
 #### ft_lstiter
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstiter` |
-| **Prototype:** | `void ft_lstiter(t_list *lst, void (*f)(void *));` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The address of a pointer to a node.<br>`f`: The address of the function used to iterate on the list. |
-| **Return value:** | None |
-| **External functs:** | None |
+| **Function Name** | `ft_lstiter` |
+| **Prototype** | `void ft_lstiter(t_list *lst, void (*f)(void *));` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The address of a pointer to a node.<br>`f`: The address of the function to apply to each node's content. |
+| **Return Value** | None |
+| **External Function** | None |
+| **Description** | Iterates through the list 'lst' and applies the function 'f' to the content of each node. |
 
-**Description:** Iterates the list 'lst' and applies the function 'f' on the content of each node.
-
-<br>
+---
 
 #### ft_lstmap
 
 | | |
 |---|---|
-| **Function name:** | `ft_lstmap` |
-| **Prototype:** | `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));` |
-| **Turn in files:** | - |
-| **Parameters:** | `lst`: The address of a pointer to a node.<br>`f`: The address of the function used to iterate on the list.<br>`del`: The address of the function used to delete the content of a node if needed. |
-| **Return value:** | The new list. NULL if the allocation fails. |
-| **External functs:** | `malloc`, `free` |
+| **Function Name** | `ft_lstmap` |
+| **Prototype** | `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));` |
+| **Files to Submit** | - |
+| **Parameters** | `lst`: The address of a pointer to a node.<br>`f`: The address of the function applied to each node's content.<br>`del`: The address of the function used to delete a node's content if needed. |
+| **Return Value** | The new list.<br>NULL if the allocation fails. |
+| **External Function** | `malloc`, `free` |
+| **Description** | Iterates through the list 'lst', applies the function 'f' to each node's content, and creates a new list resulting of the successive applications of the function 'f'. The 'del' function is used to delete the content of a node if needed. |
 
-**Description:** Iterates the list 'lst' and applies the function 'f' on the content of each node. Creates a new list resulting of the successive applications of the function 'f'. The 'del' function is used to delete the content of a node if needed.
+---
 
-<br>
+## VI. Submission and peer-evaluation
 
-## Submission and Peer-evaluation
-
-Submit your assignment to your **Git** repository as usual. Only the work inside your repository will be evaluated during the defense. Make sure to double-check the filenames to ensure they are correct.
+Submit your assignment in your Git repository as usual. Only the work inside your repository will be evaluated during the defense. Make sure to double-check the names of your files to ensure they are correct.
 
 Place all your files at the root of your repository.
 
-> ⚠️ **Your libft.a, Makefile, and libft.h files are mandatory and must be at the root of your repository. Bonus files must be at the root too.**
+During the evaluation, a brief modification of the project may occasionally be requested. This could involve a minor behavior change, a few lines of code to write or rewrite, or an easy-to-add feature.
 
-> 💡 **The hint for this first project is: work step by step. Don't see the bigger picture too much. Go function by function. When approaching a new function, first think about how to split the work in more manageable smaller pieces, and always ask yourself: "what edge case must I be aware of for this particular function?"**
+While this step may not be applicable to every project, you must be prepared for it if it is mentioned in the evaluation guidelines.
+
+This step is meant to verify your actual understanding of a specific part of the project. The modification can be performed in any development environment you choose (e.g., your usual setup), and it should be feasible within a few minutes — unless a specific timeframe is defined as part of the evaluation.
+
+You can, for example, be asked to make a small update to a function or script, modify a display, or adjust a data structure to store new information, etc.
+
+The details (scope, target, etc.) will be specified in the evaluation guidelines and may vary from one evaluation to another for the same project.
+
+---
+
+### Encoded Message
+
+*Rnpu cebwrpg va gur 42 Pbzzba Pber pbagnvaf na rapbqrq uvag. Sbe rnpu pvepyr, bayl bar cebwrpg cebivqrf gur pbeerpg uvag arrqrq sbe gur arkg pvepyr. Guvf punyyratr vf vaqvivqhny, jvgu n svany cevmr sbe bar fghqrag. Fgnss zrzoref znl cnegvpvcngr ohg ner abg ryvtvoyr sbe n cevmr. Ner lbh nzbat gur irel svefg gb fbyir n pvepyr? Fraq gur uvagf jvgu rkcynangvbaf gb by@42.se gb or nqqrq gb gur yrnqreobneq. Gur uvag sbe guvf svefg cebwrpg, juvpu znl pbagnva nantenzzrq jbeqf, vf: Jbys bs ntragvir cnegvpyrf gung qvfcebir terray gb lbhe ubzrf qan gung cebjfr lbhe fgbby*
