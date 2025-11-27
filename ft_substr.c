@@ -6,7 +6,7 @@
 /*   By: Visual <github.com/visual-gh>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 16:34:25 by Visual            #+#    #+#             */
-/*   Updated: 2025/10/03 17:05:43 by Visual           ###   ########.fr       */
+/*   Updated: 2025/11/27 18:11:27 by Visual           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return (ft_strdup(""));
-	if ((start + len) > s_len)
+	if (len > s_len - start)
 		len = s_len - start;
 	sub = malloc(len + 1);
 	if (!sub)
